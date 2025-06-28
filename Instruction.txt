@@ -1,0 +1,67 @@
+🔧 Instructions to Use HTML Files in Jupyter Notebook for Model Training and Streamlit Deployment
+📁 What’s Inside?
+Each .html file contains code for training different deep learning models. These can be used in Jupyter Notebook (.ipynb) and later integrated into a Streamlit web application.
+
+🧪 Step 1: Create a Python Environment (Important)
+To avoid package conflicts and ensure reproducibility:
+
+bash
+Copy
+Edit
+# Using conda
+conda create -n model_env python=3.10
+conda activate model_env
+
+# Or using virtualenv
+python -m venv model_env
+source model_env/bin/activate  # On Windows: model_env\Scripts\activate
+Then, install essential packages:
+
+bash
+Copy
+Edit
+pip install numpy pandas matplotlib scikit-learn tensorflow keras streamlit
+📥 Step 2: Extract Code from HTML
+Open the .html file in any browser or text editor.
+
+Copy all the Python code content.
+
+Paste it directly into a cell in your Jupyter Notebook (.ipynb).
+
+Run the cells step-by-step.
+
+💾 Step 3: Save the Trained Model
+Add the following code at the end of training:
+
+python
+Copy
+Edit
+model.save('your_model_name.h5')  # Save the model for later use in Streamlit
+You can later load it in Streamlit using:
+
+python
+Copy
+Edit
+from tensorflow.keras.models import load_model
+model = load_model('your_model_name.h5')
+🚀 Step 4: Use in Streamlit App
+In your Streamlit app (e.g., app.py):
+
+python
+Copy
+Edit
+import streamlit as st
+from tensorflow.keras.models import load_model
+
+model = load_model('your_model_name.h5')
+# Add your prediction or UI logic here
+To run the app:
+
+bash
+Copy
+Edit
+streamlit run app.py
+📌 Notes:
+Always activate the same environment before using the model or running the app.
+
+You may add additional requirements in a requirements.txt file if needed.
