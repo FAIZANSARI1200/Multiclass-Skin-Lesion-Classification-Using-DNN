@@ -20,7 +20,7 @@ To build an accurate and efficient multiclass skin lesion classifier using multi
 
 ## 🗂️ Dataset
 
-- Dataset used: [ISIC (International Skin Imaging Collaboration)](https://www.kaggle.com/datasets/kmader/skin-cancer-mnist-ham10000)
+- Dataset used: [ISIC2018 (International Skin Imaging Collaboration)](https://www.kaggle.com/datasets/kmader/skin-cancer-mnist-ham10000)
 - Contains high-resolution dermatoscopic images
 - 7-class classification:  
   - Melanoma  
